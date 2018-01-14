@@ -22,7 +22,7 @@ class ServerBase extends PacketHandler {
                 try {
                     s = ls.accept();
                     BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
-                    OutputStreamWriter out = new OutputStreamWriter(s.getOutputStream(), "UTF-8");
+                    OutputStreamWriter out = new OutputStreamWriter(s.getOutputStream());
 
                     System.out.println("new connection incoming from " + s.getInetAddress() + ":" + s.getPort());
 
